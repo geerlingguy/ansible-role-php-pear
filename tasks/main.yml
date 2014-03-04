@@ -1,0 +1,19 @@
+---
+- name: Update pear.php.net channel.
+  command: pear channel-update pear.php.net
+  register: pear_update_result
+  changed_when: "'is up to date' not in pear_update_result.stdout"
+
+- name: Discover required PEAR channels.
+  command: pear channel-discover {{ item }}
+  register: channel_result
+  changed_when: "'already initialized' not in channel_result.stdout"
+  failed_when: "channel_result.stderr"
+  with_items: php_pear_channels
+
+- name: Install PEAR libraries.
+  command: pear install {{ item }}
+  register: pear_result
+  changed_when: "'already installed' not in pear_result.stdout"
+  failed_when: "pear_result.stderr"
+  with_items: php_pear_libraries
