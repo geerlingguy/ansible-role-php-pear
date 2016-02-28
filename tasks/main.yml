@@ -9,11 +9,11 @@
   register: channel_result
   changed_when: "'already initialized' not in channel_result.stdout"
   failed_when: "channel_result.stderr"
-  with_items: php_pear_channels
+  with_items: "{{ php_pear_channels }}"
 
 - name: Install PEAR libraries.
   command: pear install {{ item }}
   register: pear_result
   changed_when: "'already installed' not in pear_result.stdout"
   failed_when: "pear_result.stderr"
-  with_items: php_pear_libraries
+  with_items: "{{ php_pear_libraries }}"
