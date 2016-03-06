@@ -33,8 +33,5 @@ script:
     && (echo 'Idempotence test: pass' && exit 0)
     || (echo 'Idempotence test: fail' && exit 1)
 
-  # Run script to test if Memcached is available and working.
-  - php tests/memcached-test.php
-
 notifications:
   webhooks: https://galaxy.ansible.com/api/v1/notifications/
