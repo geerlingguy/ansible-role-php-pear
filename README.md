@@ -1,5 +1,7 @@
 # Ansible Role: PHP PEAR packages
 
+[![Build Status](https://travis-ci.org/geerlingguy/ansible-role-php-pear.svg?branch=master)](https://travis-ci.org/geerlingguy/ansible-role-php-pear)
+
 Installs PHP PEAR packages on servers with PHP and `php-pear` already installed.
 
 ## Requirements
