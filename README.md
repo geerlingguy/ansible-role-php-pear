@@ -10,7 +10,7 @@ PHP and `php-pear` (or the equivalent) must already be installed on the server, 
 
 ## Role Variables
 
-Available variables are listed below, along with default values (see `vars/main.yml`):
+Available variables are listed below, along with default values (see `defaults/main.yml`):
 
     php_pear_channels:
       - pear.phpunit.de
