@@ -3,7 +3,10 @@
 
   vars:
     php_enable_webserver: false
+    php_enablerepo: "remi,remi-php70"
 
   roles:
+    - role: geerlingguy.repo-remi
+      when: ansible_os_family == 'RedHat'
     - geerlingguy.php
     - role_under_test
