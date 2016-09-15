@@ -1,10 +1,9 @@
 ---
-- hosts: localhost
-  remote_user: root
+- hosts: all
 
   vars:
     php_enable_webserver: false
 
   roles:
     - geerlingguy.php
-    - ansible-role-php-pear
+    - role_under_test
