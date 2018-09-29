@@ -1,5 +1,7 @@
 ---
-- hosts: all
+- name: Converge
+  hosts: all
+  become: true
 
   vars:
     php_enable_webserver: false
@@ -8,5 +10,5 @@
   roles:
     - role: geerlingguy.repo-remi
       when: ansible_os_family == 'RedHat'
-    - geerlingguy.php
-    - role_under_test
+    - role: geerlingguy.php
+    - role: geerlingguy.php-pear
