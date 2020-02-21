@@ -8,6 +8,11 @@
     php_enablerepo: "remi,remi-php72"
     php_default_version_debian: "7.2"
 
+  pre_tasks:
+    - name: Update apt cache.
+      apt: update_cache=yes cache_valid_time=600
+      when: ansible_os_family == 'Debian'
+
   roles:
     - role: geerlingguy.repo-remi
       when: ansible_os_family == 'RedHat'
