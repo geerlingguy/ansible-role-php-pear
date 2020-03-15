@@ -10,7 +10,7 @@
     php_pear_channels:
       - pear.phing.info
     php_pear_libraries:
-      - phing
+      - phing/phingdocs
 
   pre_tasks:
     - name: Update apt cache.
