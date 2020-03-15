@@ -1,5 +1,3 @@
 ---
-php_pear_channels:
-  - pear.symfony.com
-php_pear_libraries:
-  - PHP_CodeSniffer
+php_pear_channels: []
+php_pear_libraries: []

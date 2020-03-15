@@ -7,6 +7,10 @@
     php_enable_webserver: false
     php_enablerepo: "remi,remi-php72"
     php_default_version_debian: "7.2"
+    php_pear_channels:
+      - pear.phing.info
+    php_pear_libraries:
+      - phing
 
   pre_tasks:
     - name: Update apt cache.

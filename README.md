@@ -13,16 +13,14 @@ PHP and `php-pear` (or the equivalent) must already be installed on the server, 
 Available variables are listed below, along with default values (see `defaults/main.yml`):
 
     php_pear_channels:
-      - pear.phpunit.de
-      - pear.symfony.com
+      - pear.phing.info
 
-The PEAR channels that should be discovered so pear libraries can be installed. By default, PEAR is not configured to autodiscover channels for libraries you would like installed, so you need to explicitly list all the libraries' channels here.
+(Defaults to empty list (`[]`).) The PEAR channels that should be discovered so pear libraries can be installed. By default, PEAR is not configured to autodiscover channels for libraries you would like installed, so you need to explicitly list all the libraries' channels here.
 
     php_pear_libraries:
-      - phpunit/PHPUnit
-      - PHP_CodeSniffer
+      - phing
 
-The libraries/extensions you would like installed via PEAR.
+(Defaults to empty list (`[]`).) The libraries/extensions you would like installed via PEAR.
 
 ## Dependencies
 
@@ -30,18 +28,26 @@ The libraries/extensions you would like installed via PEAR.
 
 ## Example Playbook
 
-    - hosts: webservers
-      vars_files:
-        - vars/main.yml
-      roles:
-        - { role: geerlingguy.php-pear }
+```yaml
+---
+- hosts: webservers
+
+  vars_files:
+    - vars/main.yml
+
+  roles:
+    - geerlingguy.php-pear
+```
 
 *Inside `vars/main.yml`*:
 
-    php_pear_channels:
-      - pear.phpunit.de
-    php_pear_libraries:
-      - phpunit/PHPUnit
+```yaml
+php_pear_channels:
+  - pear.phpunit.de
+
+php_pear_libraries:
+  - phpunit/PHPUnit
+```
 
 ## TODO
 
