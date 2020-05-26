@@ -3,6 +3,7 @@ dependencies:
   - geerlingguy.php
 
 galaxy_info:
+  role_name: php-pear
   author: geerlingguy
   description: PHP PEAR library installation.
   company: "Midwestern Mac, LLC"
