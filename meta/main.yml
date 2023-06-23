@@ -8,11 +8,8 @@ galaxy_info:
   description: PHP PEAR library installation.
   company: "Midwestern Mac, LLC"
   license: "license (BSD, MIT)"
-  min_ansible_version: 2.0
+  min_ansible_version: 2.10
   platforms:
-    - name: EL
-      versions:
-        - all
     - name: GenericUNIX
       versions:
         - all
