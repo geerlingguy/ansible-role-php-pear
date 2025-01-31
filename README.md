@@ -1,6 +1,6 @@
 # Ansible Role: PHP PEAR packages
 
-[![CI](https://github.com/geerlingguy/ansible-role-php-pear/workflows/CI/badge.svg?event=push)](https://github.com/geerlingguy/ansible-role-php-pear/actions?query=workflow%3ACI)
+[![CI](https://github.com/geerlingguy/ansible-role-php-pear/actions/workflows/ci.yml/badge.svg)](https://github.com/geerlingguy/ansible-role-php-pear/actions/workflows/ci.yml)
 
 Installs PHP PEAR packages on servers with PHP and `php-pear` already installed.
 
