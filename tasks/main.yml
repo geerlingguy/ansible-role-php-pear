@@ -8,12 +8,12 @@
   command: "pear channel-discover {{ item }}"
   register: channel_result
   changed_when: "'already initialized' not in channel_result.stdout"
-  failed_when: "channel_result.stderr"
+  failed_when: "channel_result.stderr | length > 0"
   with_items: "{{ php_pear_channels }}"
 
 - name: Install PEAR libraries.
   command: "pear install {{ item }}"
   register: pear_result
   changed_when: "'already installed' not in pear_result.stdout"
-  failed_when: "pear_result.stderr"
+  failed_when: "pear_result.stderr | length > 0"
   with_items: "{{ php_pear_libraries }}"
